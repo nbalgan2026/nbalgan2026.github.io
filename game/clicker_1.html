@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<title>Crystal Clicker</title>
+		<script src="script3.js"></script>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+		body{
+			font-family: 'Press Start 2P', cursive;
+			background-color: rgb(255, 255, 255);
+		}
+
+        .title{
+            margin-top: 10px;
+			margin-bottom: 20px;
+            font-size: 50px;
+        }
+
+		#borderhealth{
+			border-style: solid;
+			width: 205px;
+		}
+
+		#health{
+			width:200px;
+			background-color:#FF0000;
+			height: 24px;
+		}
+
+		#healthtext{
+			position: absolute;
+			margin-left: 50px;	
+			user-select: none;
+		}
+
+		#main{
+			border-style: solid;
+			width:100%;
+		}
+
+		#mining{
+            padding: 0;
+        }
+
+		#button{
+			margin-top: 150px;
+		}
+
+
+		#autoclickers{
+			height: 803px;
+		}
+
+		#upgrades{
+			height: 803px;
+		}
+
+		#rockbutton{
+			background-color: transparent;
+			border-style: none;
+			user-select: none;
+			transition: 0.2s;
+		}
+
+		#rockbutton:hover{
+			transform: scale(1.1);
+		}
+
+		#rockbutton:active{
+			transform: scale(0.9);
+		}
+    </style>
+  </head>
+
+  <body>
+
+		<div id="main" class="container-fluid">
+		
+			<h1 class="title pt-1 text-center">Crystal Mining Simulator</h1>
+
+			<h3 id="time" class="text-center">Time: 0 m, 0 s</h3>
+
+			<div class="row">
+
+				<div class="col border border-5 text-center p-0">
+
+					<div class="col">
+						<h1>Upgrades</h1>
+					</div>
+
+					<div id="upgrades" class="d-flex flex-column overflow-auto">
+
+						<div class="btn btn-secondary border-dark rounded-0 container pt-4" onclick="upgrade1()" id="me1">
+							<div class="row">
+
+								<div class="col-3">
+									<img id="imgme1" src="https://static.wikia.nocookie.net/sun-haven/images/d/d7/Copper_Pickaxe.png/revision/latest?cb=20210720164058" alt="bronze" width="100">
+								</div>
+
+								<div class="col-9">
+									<h4>Mining Efficiency 1</h4>
+									<p id="cost1">Upgrade cost: 50 </p>
+									<p>Get an extra 2 crystals per rock mined</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="btn btn-secondary border-dark rounded-0 container pt-4" onclick="upgrade2()" id="me2">
+							<div class="row">
+
+								<div class="col-3">
+									<img id="imgme2" src="https://static.wikia.nocookie.net/sun-haven/images/a/a2/Iron_Pickaxe.png/revision/latest?cb=20210721024207" alt="iron" width="100">
+								</div>
+
+								<div class="col-9">
+									<h4>Mining Efficiency 2</h4>
+									<p id="cost2">Upgrade cost: 100 </p>
+									<p>Get an extra 3 crystals per rock mined</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="btn btn-secondary border-dark rounded-0" onclick="upgrade5()" id="dmg1">
+							<p id="cost2">Upgrade cost: 150 </p>
+							<p>Deal an extra 1 damage to the rock</p>
+						</div>
+
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+						<div class="btn btn-secondary border-dark rounded-0" onclick="win()" id="win1">
+							<p>Cost: 1000</p> 
+							<p>Win the Game.</p>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="mining" class="container col border border-5 text-center">
+
+					<div id="button">
+
+						<p id="crystals"><img src="https://www.wyvernwood.co.uk/wp-content/uploads/2022/05/Precious-Gems.png" alt="google" width="30">&nbsp; Crystals: 0</p>
+						
+						<p id="cp">Extra Crystals: 0</p>
+				
+						<button id="rockbutton" class="m-2" onclick="add()">
+							<img src="https://static.wikia.nocookie.net/sun-haven/images/0/0b/Rock.png/revision/latest?cb=20210721141827" alt="rock" width="350" draggable="false">
+						</button>
+
+						<div id="borderhealth" class="mx-auto mt-4">
+							<div id="healthtext">Health</div>
+							<div id="health" class="mx-auto"></div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col border border-5 text-center p-0">
+
+						<div class="col">
+							<h1>Automaters</h1>
+						</div>
+
+					<div id="autoclickers" class="d-flex flex-column overflow-auto">
+
+						<div class="btn btn-secondary border-dark rounded-0 container pt-4" onclick="miner()" id="miner">
+							<div class="row">
+
+								<div class="col-2">
+									<img id="imgm1" src="https://static.wikia.nocookie.net/idle-cave-miner/images/b/bb/Rick-Large.png/revision/latest?cb=20221209095113" alt="miner" width="90">
+								</div>
+
+								<div class="col-9 my-auto">
+									<h4 id="amountofminers">Miner</h4>
+									<h6 id="costminer">Cost: 10</h6>
+									<p>Mines rocks every 5 seconds</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div onclick="auto2()" id="driller" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="amountofdrillers">Driller</h6>
+							<h6 id="costdriller">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+						<div onclick="auto2()" id="sc" class="btn btn-secondary border-dark rounded-0">
+							<h6 id="scnt">Driller</h6>
+							<h6 id="costs">Cost: 100</h6>
+							<p>Drills 1 rock every second</p>
+						</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
