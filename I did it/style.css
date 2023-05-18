@@ -1,0 +1,112 @@
+/*start of added stuff*/
+html {
+    width: 100%;
+}
+header{
+    max-width: max-content;
+}
+@font-face {
+    font-family: 'LifeFont';
+    src: url('style-stuff/TrashHand.TTF');
+  }
+  
+body {
+    font-family: 'LifeFont', sans-serif;
+    background-color: #bed5be;
+    }
+
+.logo {
+    height: 150px;
+}
+
+.weep {
+    height: 150px;
+}
+
+.but {
+    color: #FFC90E;
+    background-color: white;
+}
+
+/*end of added stuff*/
+
+div h1s{
+    background-color: #ffdc5e;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+.column {
+    background-color: #ffdc5e;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-left: 150px;
+}
+
+.welp {
+    background-color: #125f22;
+}
+
+/*navbar */
+#navigation ul li a {
+    display: block;
+    padding: 8px;
+    background-color: #25883D;
+    font-family: Lifefont;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #25883D;
+  }
+  
+li {
+    float: left;
+}
+    
+li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 25px;
+}
+
+li a:hover {
+    display: block;
+    padding: 8px;
+    background-color: #ffdc5e;
+    color: white;
+}
+
+li a:active {
+    display: block;
+    padding: 8px;
+    background-color: #df4d52;
+    color: white;
+}
+
+li{
+    text-decoration: none;
+}
+button{
+    width: 50%;
+}
+section{
+    text-align: center;
+}
+@media screen and (max-width: 1080px) {
+    .left, .main, .right {
+        width: 100%;
+    }
+}
+/*navbar*/
+
